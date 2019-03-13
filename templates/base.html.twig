@@ -3,10 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="m-content--skin-light2 m-header--fixed">
+
+        <div class="m-grid m-grid--hor m-grid--root m-page">
+            {{ include('core_layout/navbar.html.twig') }}
+
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+
+                {{ include('core_layout/aside.html.twig') }}
+
+                {% block body %}{% endblock %}
+                
+            </div>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

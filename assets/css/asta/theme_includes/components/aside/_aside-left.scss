@@ -1,0 +1,125 @@
+//
+//** Aside Left
+//
+
+
+	.m-aside-left {
+		width: 255px;
+
+		&.m-aside-left--skin-dark {
+			background-color: #282733;	
+		}
+		
+		&.m-aside-left--skin-light {
+			background-color: #fff; 		
+		}
+
+		.m-aside-menu {
+
+			.m-menu__nav {
+				list-style: none;
+				padding: 30px 0 30px 0;
+
+				> .m-menu__section {
+					margin: 20px 0 0 0;
+					height: 40px;
+					display: table;
+					width: 100%;
+					vertical-align: middle;
+					padding: 0 27px;
+
+					.m-menu__section-text {
+						color: #464b66;
+						font-size: .83rem;
+						font-weight: 500;
+						text-transform: uppercase;
+						letter-spacing: .3px;
+						display: table-cell;
+						margin: 0;
+						padding: 0;
+						vertical-align: middle;
+					}
+				}
+
+				> .m-menu__item {
+					position: relative;
+					margin: 0;
+					display: block;
+					float: none;
+					height: auto;
+					padding: 0;
+
+					> .m-menu__link {
+						cursor: pointer;
+						padding: 9px 30px;
+						height: 44px;
+						display: table;
+						table-layout: fixed;
+						width: 100%;
+						margin: 0;
+						text-decoration: none;
+						position: relative;
+
+						.m-menu__link-text {
+							color: #868aa8;
+							display: table-cell;
+							height: 100%;
+							width: 100%;
+							padding: 0;
+							vertical-align: middle;
+							font-weight: 400;
+							font-size: 1.02rem;
+							text-transform: initial;
+						}
+						
+						.m-menu__link-icon {
+							color: #747893;
+							text-align: left;
+							width: 35px;
+							font-size: 1.4rem;
+							display: table-cell;
+							height: 100%;
+							vertical-align: middle;
+							line-height: 0;
+						}
+
+					}
+
+					&:not(.m-menu__item--parent):not(.m-menu__item--open):not(.m-menu__item--expanded):not(.m-menu__item--active):hover {
+						-webkit-transition: background-color 0.3s;
+						transition: background-color 0.3s;
+						
+						> .m-menu__link {
+							background-color: #2f2e3c;
+						}
+					}
+
+				}
+
+				&:before, &:after {
+					content: " ";
+					display: table;
+				}
+				&:after {
+					clear: both;
+				}
+			}
+
+		}
+	}
+
+	//== Hide Mode
+	.m-aside-left--hide {
+		.m-aside-left {
+			width: 0;
+			overflow: hidden; 
+		}
+
+		.m-body {
+			padding-left: 0 !important;
+		}
+	}
+
+//== Build Aside Left Offcanvas
+//@include m-generate-component--offcanvas(m-aside-left, tablet-and-mobile, array-get($m-config-aside, aside-left, self, offcanvas, tablet-and-mobile) ); 
+//@include m-generate-component--offcanvas(m-aside-left--offcanvas-default, default, array-get($m-config-aside, aside-left, self, offcanvas, default) );

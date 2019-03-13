@@ -1,0 +1,33 @@
+$m-header-bg-color: #201f2b;
+
+//== Font families
+$m--font-families: (
+    regular: 'Poppins',  
+    heading: 'Roboto'
+)!default;
+
+
+//== Breakpoints
+$m--layout-breakpoints: (
+  	// Small screen / phone
+    sm: 576px,
+  	
+  	// Medium screen / tablet
+  	md: 768px,
+  	
+  	// Large screen / desktop
+  	lg: 1024px,
+  	
+  	// Extra large screen / wide desktop
+  	xl: 1200px,
+
+    // Extra large screen / wide desktop
+    xxl: 1400px,
+
+    // Super Extra large screen / wide desktop
+    xxxl: 1600px
+)!default;
+
+//== Layout Shared Settings
+$m-aside-left-width: 255px;
+$m-aside-left-width-minimize: 78px;
