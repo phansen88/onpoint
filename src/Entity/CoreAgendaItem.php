@@ -73,5 +73,15 @@ class CoreAgendaItem
      */
     private $agenda;
 
+    // Getters & Setters
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getShortDescription() {
+        return $this->shortDescription;
+    }
+
 
 }

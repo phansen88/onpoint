@@ -6,13 +6,15 @@
                 <h4 class="m-menu__section-text">Reports</h4>
                 <i class="m-menu__section-icon flaticon-more-v2"></i>
             </li>
-            <li class="m-menu__item " aria-haspopup="true" m-menu-link-redirect="1">
+            {% for aside_item in aside_menu %}
+            <li class="m-menu__item" aria-haspopup="true" m-menu-link-redirect="1">
                 <a href="?page=inner&amp;demo=demo12" class="m-menu__link ">
                     <span class="m-menu__item-here"></span>
-                    <i class="m-menu__link-icon flaticon-graphic"></i>
-                    <span class="m-menu__link-text">Accounting</span>
+                    <i class="m-menu__link-icon {{aside_item.icon}}"></i>
+                    <span class="m-menu__link-text">{{aside_item.title}}</span>
                 </a>
             </li>
+            {% endfor %}
         </ul>
     </div>
     <!-- END: Aside Menu -->
